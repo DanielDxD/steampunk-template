@@ -1,0 +1,31 @@
+{
+    "name": "steampunk-example",
+    "module": "src/main.ts",
+    "type": "module",
+    "scripts": {
+        "dev": "bun --watch src/main.ts",
+        "start": "out/bin/application",
+        "build": "bun build ./src/main.ts --compile --minify --sourcemap=none --target=bun --outfile out/bin/application",
+        "build:linux": "bun build ./src/main.ts --compile --minify --sourcemap=none --target=bun-linux-x64 --outfile out/bin/linux/application",
+        "build:win": "bun build ./src/main.ts --compile --minify --sourcemap=none --target=bun-windows-x64 --outfile out/bin/win/application"
+    },
+    "devDependencies": {
+        "@types/bun": "latest",
+        "@eslint/js": "^10.0.1",
+        "@typescript-eslint/eslint-plugin": "^8.56.1",
+        "@typescript-eslint/parser": "^8.56.1",
+        "eslint": "^10.0.2",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-prettier": "^5.5.5",
+        "prettier": "^3.8.1",
+        "typescript-eslint": "^8.56.1"
+    },
+    "peerDependencies": {
+        "typescript": "^5"
+    },
+    "dependencies": {
+        "@danielgl/steampunk": "1.0.1",
+        "reflect-metadata": "^0.2.2",
+        "zod": "^4.3.6"
+    }
+}
