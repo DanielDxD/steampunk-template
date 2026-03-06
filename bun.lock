@@ -5,7 +5,7 @@
     "": {
       "name": "steampunk-example",
       "dependencies": {
-        "@danielgl/steampunk": "1.0.1",
+        "@danielgl/steampunk": "1.0.4",
         "reflect-metadata": "^0.2.2",
         "zod": "^4.3.6",
       },
@@ -26,7 +26,7 @@
     },
   },
   "packages": {
-    "@danielgl/steampunk": ["@danielgl/steampunk@1.0.1", "", { "dependencies": { "reflect-metadata": "^0.2.2", "zod": "^4.3.6" }, "peerDependencies": { "typescript": "^5" } }, "sha512-UgZVjMxv99zGMJvN5V17rS76clv5wSYC5lRnHQw9rXO3hKgv4PNOlH0bUngwoeanNEIZiBCrmdtEI4vne6O8uw=="],
+    "@danielgl/steampunk": ["@danielgl/steampunk@1.0.4", "", { "dependencies": { "reflect-metadata": "^0.2.2", "zod": "^4.3.6" }, "peerDependencies": { "typescript": "^5" } }, "sha512-OJ186kVHXUxXHKC4dJC2KW6lHht0r6JS/7cU86koMmjPCeTIE/5L5GRZORRAEGLkgz1Z5Jo9aYHHZZKxya6Png=="],
 
     "@eslint-community/eslint-utils": ["@eslint-community/eslint-utils@4.9.1", "", { "dependencies": { "eslint-visitor-keys": "^3.4.3" }, "peerDependencies": { "eslint": "^6.0.0 || ^7.0.0 || >=8.0.0" } }, "sha512-phrYmNiYppR7znFEdqgfWHXR6NCkZEK7hwWDHZUjit/2/U0r6XvkDl0SYnoM51Hq7FhCGdLDT6zxCCOY1hexsQ=="],
 

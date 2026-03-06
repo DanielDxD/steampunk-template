@@ -7,7 +7,12 @@
         "start": "out/bin/application",
         "build": "bun build ./src/main.ts --compile --minify --sourcemap=none --target=bun --outfile out/bin/application",
         "build:linux": "bun build ./src/main.ts --compile --minify --sourcemap=none --target=bun-linux-x64 --outfile out/bin/linux/application",
-        "build:win": "bun build ./src/main.ts --compile --minify --sourcemap=none --target=bun-windows-x64 --outfile out/bin/win/application"
+        "build:win": "bun build ./src/main.ts --compile --minify --sourcemap=none --target=bun-windows-x64 --outfile out/bin/win/application",
+        "lint": "eslint \"{src,tests,example}/**/*.ts\"",
+        "lint:fix": "eslint \"{src,tests,example}/**/*.ts\" --fix",
+        "format:check": "prettier --check \"{src,tests,example}/**/*.ts\"",
+        "format": "prettier --write \"{src,tests,example}/**/*.ts\"",
+        "test": "bun test"
     },
     "devDependencies": {
         "@types/bun": "latest",
@@ -24,7 +29,7 @@
         "typescript": "^5"
     },
     "dependencies": {
-        "@danielgl/steampunk": "1.0.1",
+        "@danielgl/steampunk": "1.0.4",
         "reflect-metadata": "^0.2.2",
         "zod": "^4.3.6"
     }

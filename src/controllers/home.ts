@@ -1,10 +1,12 @@
-import { Controller, Get, HttpResult } from "@danielgl/steampunk";
+import { ApiController, Controller, Get, HttpResult } from "@danielgl/steampunk";
 import { HomeService } from "../services/home";
 
-@Controller()
-export class HomeController {
+@ApiController()
+export class HomeController extends Controller {
 
-    public constructor(private readonly service: HomeService) { }
+    public constructor(private readonly service: HomeService) {
+        super();
+    }
 
     @Get()
     public async getHello() {

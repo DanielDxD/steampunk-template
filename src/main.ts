@@ -1,12 +1,13 @@
 import { cors, throttle, WebApplication } from "@danielgl/steampunk";
 import { env } from "./config/env";
+import { HomeController } from "./controllers/home";
 import { HomeService } from "./services/home";
 
 const builder = WebApplication.createBuilder();
 
 builder.services.addSingleton(HomeService);
 
-await builder.addControllers("src/controllers");
+await builder.addControllers([HomeController]);
 
 const app = builder.build();
 
@@ -22,14 +23,9 @@ app.useOpenApi({
 app.use(cors());
 app.use(throttle({ limit: 100, windowMs: 60000 })); // 100 requests per minute
 
-app.use(async (context, next) => {
-    console.log(`[${context.method}] ${context.path}`);
-    return next();
-});
-
 app.mapGet("/minimal", () => ({
     message: "Hello from Minimal API! 🚀",
     timestamp: new Date().toISOString()
 }));
 
-app.run(8080);
+app.run(env.PORT);
