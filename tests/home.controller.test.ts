@@ -1,5 +1,5 @@
 import { describe, expect, mock, test } from "bun:test";
-import { HomeController } from "../src/controllers/home";
+import { HomeController } from "../src/controllers/HomeController";
 
 describe("HomeController", () => {
     test("getHello should return a successful result with message", async () => {

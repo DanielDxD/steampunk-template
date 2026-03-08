@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { HomeService } from "../src/services/home";
+import { HomeService } from "../src/services/HomeService";
 
 describe("HomeService", () => {
     test("getHello should return 'Hello'", async () => {

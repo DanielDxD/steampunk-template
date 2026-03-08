@@ -1,7 +1,7 @@
 import { cors, throttle, WebApplication } from "@danielgl/steampunk";
 import { env } from "./config/env";
-import { HomeController } from "./controllers/home";
-import { HomeService } from "./services/home";
+import { HomeController } from "./controllers/HomeController";
+import { HomeService } from "./services/HomeService";
 
 const builder = WebApplication.createBuilder();
 

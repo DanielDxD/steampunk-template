@@ -1,5 +1,5 @@
 import { ApiController, Controller, Get, HttpResult } from "@danielgl/steampunk";
-import { HomeService } from "../services/home";
+import { HomeService } from "../services/HomeService";
 
 @ApiController()
 export class HomeController extends Controller {
